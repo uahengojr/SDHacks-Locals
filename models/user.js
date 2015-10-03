@@ -6,7 +6,7 @@ var userModel = function() {
 	var userSchema = mongoose.Schema({
 		name: {giveName: String, familyName: String, displayName: String},
 		email: String,
-		facebook: {id: String, accesToken: String, refreshToekn: String}, 		//Perhaps store in db through a buffer variable
+		facebook: {id: String, accesToken: String, refreshToekn: String}, 		//Profile picture --> Perhaps store in db through a buffer variable
 		gender: String,
 		password: String,
 		geoLoc: {lat: Number, long: Number}

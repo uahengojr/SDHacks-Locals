@@ -5,13 +5,13 @@ var kraken = require('kraken-js');
 var passport = require('passport');
 
 var db = require('./heavyLiftingLibrary/db');
+var fbAuhh = require('./heavyLiftingLibrary/fbAuth');
 var User = require('./models/user');
 
 var options, app;
 
 options = {
     onconfig: function (config, next) {
-		
 		
 		passport.serializeUser(function(user, done) {
 		  done(null, user.id);

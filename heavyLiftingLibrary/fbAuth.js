@@ -2,12 +2,13 @@
 
 var passport = require('passport'),
 	User = require('../models/user'),
+	appKeys = require('../config/keys'),
 	FacebookStrategy = require('passport-facebook').Strategy;
 	
 	passport.use(new FacebookStrategy({
-		clinetID:'[APP_CLIENT_ID]',
-		clientSecret:'[[APP_CLIENT_SECRET]' ,
-		callbackURl: 'http://127.0.0.1:8000/'
+		clinetID: appKeys.facebookAuth.clientID,
+		clientSecret: appKeys.facebookAuth.clientSecret,
+		callbackURl:  appKeys.facebookAuth.callbackURl
 	},
 	function(accessToken, refreshToken, profile, done) {
 		//Async verification...

@@ -3,6 +3,8 @@
 {<body}
     <h1>Hello, user! Please, {name}</h1>
 	
+	<h2 style="color: red;">This is the registration page. You are not logged in!!!</h1>
+	
 	<a href="#"><button style="color: blue;">Login via Facebook</button></a>
 	
 {/body}
