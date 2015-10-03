@@ -26,8 +26,12 @@
     
         ]
     },
-    
-
+	
+	
+	"databaseConfig": {
+	        "host": "localhost",
+	        "database": "SDHacks-Locals"
+	    },
     
 
     "specialization": {

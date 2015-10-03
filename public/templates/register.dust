@@ -1,0 +1,8 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>Hello, user! Please, {name}</h1>
+	
+	<a href="#"><button style="color: blue;">Login via Facebook</button></a>
+	
+{/body}
