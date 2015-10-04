@@ -14,16 +14,15 @@ module.exports = function (router) {
         
     });
 	
-	//Direct user to facebook fro authentication
-	router.get('/auth/facebook', passport.authenticate('facebook', {scope: 'email'}));
+	//Direct user to facebook fro authentication.
+	router.get('/auth/facebook', passport.authenticate('facebook'));
 	
-	//Handle route after authentication
-	router.get('/auth/facebook/callback', 
-		passport.authenticate('facebook', {
-			successRedirect : '/home', 
-			failureRedirect: '/register'
-		})
-	);
+	//Handle route after authentication from facebook.	
+	router.get('/auth/facebook/callback',
+  		passport.authenticate('facebook', 
+			{ successRedirect: '/home',
+				failureRedirect: '/register' }
+	));
 	
 	
 	router.get('/logout', function(req, res) {
